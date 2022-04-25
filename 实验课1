@@ -1,0 +1,43 @@
+#练习一
+#(1)
+i<-(1:1000)   #定义i为1——1000的整数
+j<-1/i        #j为i的倒数
+k<-atan(j)    #则k就为i的倒数的反正切值
+#(2)
+x<-(1:1000)
+a<-1/x    #a为x的倒数
+y<-atan(a)#y为a的反正切
+b<-tan(y) #b为y的正切
+z<-1/b    #z是b的倒数，且与x相同
+#练习二
+a<-identical(x,z)  #把identical(x,z)赋值给a
+b<-all.equal(x,z)  #把all.equal(x,z)赋值给b
+c<-x==z
+d<-all.equal(x,z,tolerance=0) #利用all.equal函数来表示，其容忍度为0
+#练习三
+true_and_missing<-c(TRUE,NA)
+false_and_missing<-c(FALSE,NA)
+mixed<-c(TRUE,NA)
+a<-any(true_and_missing)
+b<-any(false_and_missing)
+c<-any(mixed)
+e<-all(true_and_missing)
+f<-all(false_and_missing)
+g<-all(mixed)
+#练习三
+#(1)
+k<-sample(50:1000,100,replace=F)     #在50——1000里随机生成100个整数，采取不放回形式
+cumsum(k)    #对k里的100个数进行累积求和
+median(k)    #对k求其中位数
+mean(k)     #对k求和后的平均数
+var(k)       #求k的方差
+#(2)
+d<-atan(1000)  #d为1000的反正切，其为圆的直径
+R<-d/2
+s<-pi*R^2     #计算圆的面积即可
+#(3)
+x1<-c(2,3)
+x2<-(13,22)
+t1<-x2[1]-x1[1]
+t2<-x2[2]-x1[2]
+p<-sqrt(t1^2+t2^2)  #使用一维数组来计算两点之间的距离
